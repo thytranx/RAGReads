@@ -14,10 +14,10 @@ from sentence_transformers import SentenceTransformer
 load_dotenv()
 
 # Neo4j connection
-NEO4J_URI = os.getenv("NEO4J_URI", "")
-NEO4J_USER = os.getenv("NEO4J_USER", "")
-NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD", "")
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
+NEO4J_URI = os.getenv("NEO4J_URI", "bolt://localhost:7687")
+NEO4J_USER = os.getenv("NEO4J_USER", "neo4j")
+NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD", "Abhi@1234")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "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")
 
 # Initialize embedding model
 embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
